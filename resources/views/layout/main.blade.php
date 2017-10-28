@@ -29,11 +29,18 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('create_product')}}">Create</a>
+            </li>
         </ul>
     </div>
 </nav>
 
 <main role="main" class="container">
+
+    @if(Session::has('flash_message'))
+        <p class="alert alert-info">{{ Session::get('flash_message') }}</p>
+    @endif
 
     @yield('content')
 
