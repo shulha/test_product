@@ -3,7 +3,7 @@
 @section('content')
     <div class="row masonry" data-columns>
         @foreach($products as $product)
-            <div class="col-md-3 item">
+            <div class="col-md-3" id="item-{{$product->id}}">
                 <div class="img-thumbnail">
                     <img height=200 src="{{$product->image}}" alt="">
                     <div class="caption">
