@@ -25,33 +25,37 @@
                 <hr>
                 <div class="form-group">
                     <label class="control-label" for="name">Name of product</label>
-                    <input required class="form-control" type="text" id="name" name="name"/>
+                    <input required class="form-control" type="text" id="name"
+                           name="name" value="{{ old('name') }}"/>
                 </div>
                 <div class="row">
                     <div class="col form-group">
                         <label class="control-label" for="programId">ProgramId</label>
-                        <input required class="form-control" type="number" min="0" id="programId" name="programId"/>
+                        <input required class="form-control" type="number" min="0" id="programId"
+                               name="programId" value="{{ old('programId') }}"/>
                     </div>
                     <div class="col form-group">
                         <label class="control-label" for="programName">ProgramName</label>
-                        <input required class="form-control" type="text" id="programName" name="programName"/>
+                        <input required class="form-control" type="text" id="programName"
+                               name="programName" value="{{ old('programName') }}"/>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col form-group">
                         <label class="control-label" for="priceOld">PriceOld</label>
                         <input required class="form-control" type="number" min="0.00" max="999999.99" step="0.01" id="priceOld"
-                           name="priceOld"/>
+                           name="priceOld" value="{{ old('priceOld') }}"/>
                     </div>
                     <div class="col form-group">
                         <label class="control-label" for="price">Price</label>
                         <input required class="form-control" type="number" min="0.00" max="999999.99" step="0.01" id="price"
-                               name="price"/>
+                               name="price" value="{{ old('price') }}"/>
                     </div>
                     <div class="col form-group">
                         <label class="control-label" for="currency">Currency</label>
-                        <select required class="form-control custom-select" id="currency" name="currency">
-                            <option selected>Choose</option>
+                        <select required class="form-control custom-select" id="currency"
+                                name="currency" >
+                            <option selected value="{{ old('currency') }}">{{ old('currency') }}</option>
                             <option value="EUR">EUR</option>
                             <option value="USD">USD</option>
                             <option value="UAH">UAH</option>
@@ -60,37 +64,43 @@
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="description">Description</label>
-                    <textarea required class="form-control" rows="4" id="description" name="description"></textarea>
+                    <textarea required class="form-control" rows="4" id="description"
+                              name="description">{{ old('description') }}</textarea>
                 </div>
                 <div class="row">
                     <div class="col form-group">
                         <label class="control-label" for="manufacturer">Manufacturer</label>
-                        <input class="form-control" type="text" id="manufacturer" name="manufacturer"/>
+                        <input class="form-control" type="text" id="manufacturer"
+                               name="manufacturer" value="{{ old('manufacturer') }}"/>
                     </div>
                     <div class="col form-group">
                         <label class="control-label" for="ean">ean</label>
-                        <input required class="form-control" type="number" min="0" id="ean" name="ean"/>
+                        <input required class="form-control" type="number" min="0" id="ean"
+                               name="ean" value="{{ old('ean') }}"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="image">URL of image</label>
-                    <input required class="form-control" type="url" id="image" name="image"/>
+                    <input required class="form-control" type="url" id="image"
+                           name="image" value="{{ old('image') }}"/>
                 </div>
                 <div class="row">
                     <div class="col form-group">
                         <label class="control-label" for="merchantCategory">MerchantCategory</label>
-                        <input required class="form-control" type="text" id="merchantCategory" name="merchantCategory"/>
+                        <input required class="form-control" type="text" id="merchantCategory"
+                               name="merchantCategory" value="{{ old('merchantCategory') }}"/>
                     </div>
                     <div class="col form-group">
                         <label class="control-label" for="merchantEmail">MerchantEmail</label>
-                        <input required class="form-control" type="email" id="merchantEmail" name="merchantEmail"/>
+                        <input required class="form-control" type="email" id="merchantEmail"
+                               name="merchantEmail" value="{{ old('merchantEmail') }}"/>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 form-group">
                     <label class="control-label" for="shippingCosts">ShippingCosts</label>
                     <input required class="form-control" type="number" min="0.00" max="999999.99" step="0.01" id="shippingCosts"
-                           name="shippingCosts"/>
+                           name="shippingCosts" value="{{ old('shippingCosts') }}"/>
                     </div>
                 </div>
             </div>
