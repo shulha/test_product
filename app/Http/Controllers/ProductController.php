@@ -36,12 +36,12 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Product $product)
+    public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
             "name" => "required",
             "programId" => "integer",
-            "price" => "required|numeric|max:9999.99",
+            "price" => "required|numeric|max:999999.99",
             "currency" => "required",
             "manufacturer" => "required",
             "ean" => "integer",

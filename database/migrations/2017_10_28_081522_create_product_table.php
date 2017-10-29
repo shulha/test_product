@@ -18,14 +18,14 @@ class CreateProductTable extends Migration
             $table->string('name');
             $table->unsignedInteger('programId');
             $table->string('programName');
-            $table->unsignedDecimal('price', 6, 2);
+            $table->unsignedDecimal('price', 8, 2);
             $table->char('currency', 3);
             $table->text('description');
             $table->string('manufacturer');
             $table->unsignedBigInteger('ean');
             $table->string('image');
-            $table->unsignedDecimal('priceOld', 6, 2);
-            $table->unsignedDecimal('shippingCosts', 6, 2);
+            $table->unsignedDecimal('priceOld', 8, 2);
+            $table->unsignedDecimal('shippingCosts', 8, 2);
             $table->string('merchantCategory');
             $table->string('merchantEmail');
             $table->timestamps();
